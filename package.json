@@ -1,0 +1,13 @@
+{
+  "name": "ali-oss-static-web-deploy",
+  "version": "0.0.1",
+  "description": "To help you deploy your static web application with ali oss",
+  "main": "index.js",
+  "repository": "https://github.com/Blackman99/ali-oss-static-web-deploy",
+  "author": "Zhao Dongsheng",
+  "license": "MIT",
+  "devDependencies": {
+    "ali-oss": "^6.15.2",
+    "chalk": "^4.1.1"
+  }
+}
