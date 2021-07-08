@@ -5,11 +5,11 @@ A tool to help you deploy static web application with ali oss
 
 ## Install
 
-* with npm
+* via npm
 ```sh
 npm install --save ali-oss-static-web-deploy
 ```
-* with yarn
+* via yarn
 
 ```sh
 yarn add ali-oss-static-web-deploy

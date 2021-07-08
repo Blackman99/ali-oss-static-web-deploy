@@ -9,12 +9,12 @@ const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
 
   logInfo(`Indexing bucket files...`)
   const oldFiles = await getAllBucketFiles(aliOssClient)
-  logInfo(`Index bucket files done`)
+  logInfo(`Bucket files indexed`)
 
   if (oldFiles && oldFiles.length > 0) {
     logDanger(`Deleting bucket files...`)
     await aliOssClient.deleteMulti(oldFiles.map(({ name }) => name), { quiet: true })
-    logDanger(`Delete bucket files done`)
+    logDanger(`Bucket files deleted`)
   }
   const newFiles = await getUploadFiles(staticWebAppPath)
 
@@ -25,7 +25,7 @@ const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
     process.stdout.write(`${chalk.yellow('Uploading local file: ')}${localPath} ${chalk.yellow('To Ali OSS: ')}${remotePath}\x1b[K`)
     await aliOssClient.put(remotePath, path.normalize(localPath))
   }
-  logInfo(`\nUpload new files done`)
+  logInfo(`\nNew files uploaded`)
 }
 
 module.exports = deleteAllThenUploadAll
