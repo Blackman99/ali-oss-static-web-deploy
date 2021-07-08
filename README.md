@@ -25,7 +25,7 @@ aliOSSStaicWebDeploy({
   accessKeyId: 'Your access key',
   accessKeySecret: 'Your access key secret',
   bucket: 'Your bucket name',
-  staticWebAppPath: 'Your path to deploy', // for example: require('path').resolve(__dirname, 'dist')
+  staticWebAppPath: 'Your local path to deploy', // for example: require('path').resolve(__dirname, 'dist')
 })
 ```
 
