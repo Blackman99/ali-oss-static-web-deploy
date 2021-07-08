@@ -18,9 +18,10 @@ const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
   const newFiles = await getUploadFiles(staticWebAppPath)
 
   logInfo(`Uploading new files...`)
-  newFiles.forEach(async ([localPath, remotePath]) => {
+  for(let i = 0; i < newFiles.length; i++) {
+    const [localPath, remotePath] = newFiles[i]
     await aliOssClient.put(remotePath, path.normalize(localPath))
-  })
+  }
   logInfo(`Upload new files done`)
 }
 
