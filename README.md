@@ -29,7 +29,9 @@ aliOSSStaicWebDeploy({
 })
 ```
 
-==**This tool will delete all files in the bucket then upload all files in `staticWebAppPath`!**==
+**This tool will delete all files in the bucket then upload all files in `staticWebAppPath`!**
+
+**Please be clearly understanding the consequences!**
 
 ## Relative Efforts
 
