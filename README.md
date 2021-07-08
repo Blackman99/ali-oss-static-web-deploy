@@ -25,7 +25,7 @@ aliOSSStaicWebDeploy({
   accessKeyId: 'Your access key',
   accessKeySecret: 'Your access key secret',
   bucket: 'Your bucket name',
-  staticWebAppPath: 'Your local path to deploy', // for example: require('path').resolve(__dirname, 'dist')
+  staticWebAppPath: 'Your local path to deploy', // for example: require('path').resolve(process.cwd(), 'dist')
 })
 ```
 
@@ -33,7 +33,7 @@ aliOSSStaicWebDeploy({
 
 **Please be clearly understanding the consequences!**
 
-## Relative Efforts
+## References
 
 * [Ali OSS Node SDK](https://github.com/ali-sdk/ali-oss)
 * [Ali OSS official documentation](https://help.aliyun.com/product/31815.html)
