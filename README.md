@@ -1,5 +1,5 @@
 
-## Background
+## Introduction
 
 A tool to help you deploy static web application with ali oss
 
@@ -25,9 +25,14 @@ aliOSSStaicWebDeploy({
   accessKeyId: 'Your access key',
   accessKeySecret: 'Your access key secret',
   bucket: 'Your bucket name',
-  staticWebAppPath: 'Your local path to deploy', // for example: require('path').resolve(process.cwd(), 'dist')
+  // for example: require('path').resolve(process.cwd(), 'dist')
+  staticWebAppPath: 'Your local path to deploy'
 })
 ```
+
+If you don't know how to get the `accessKeyId` and `accessKeySecret`.
+
+Please read the [Ali RAM Documnetation](https://help.aliyun.com/document_detail/28672.html)
 
 **This tool will delete all files in the bucket then upload all files in `staticWebAppPath`!**
 
@@ -37,6 +42,7 @@ aliOSSStaicWebDeploy({
 
 * [Ali OSS Node SDK](https://github.com/ali-sdk/ali-oss)
 * [Ali OSS official documentation](https://help.aliyun.com/product/31815.html)
+* Please read the [Ali RAM Documnetation](https://help.aliyun.com/document_detail/28672.html)
 
 ## License
 
