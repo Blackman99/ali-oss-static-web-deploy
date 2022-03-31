@@ -6,12 +6,12 @@ const getUploadFiles = async(staticWebAppPath) => {
     const paths = fs.readdirSync(basePath)
     const uploadPrefix = prefix === '' ? '' : `${prefix}/`
     paths.forEach(path => {
-      const stat = fs.statSync(`${basePath}\\${path}`)
+      const stat = fs.statSync(`${basePath}/${path}`)
       if (stat.isDirectory()) {
-        readFiles(`${basePath}\\${path}`, `${uploadPrefix}${path}`)
+        readFiles(`${basePath}/${path}`, `${uploadPrefix}${path}`)
         return
       }
-      files.push([`${basePath}\\${path}`, `${uploadPrefix}${path}`])
+      files.push([`${basePath}/${path}`, `${uploadPrefix}${path}`])
     })
   }
   readFiles(staticWebAppPath)
