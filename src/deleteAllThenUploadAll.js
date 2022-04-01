@@ -13,7 +13,7 @@ const b1 = new cliProgress.SingleBar({
 })
 
 
-// delete all bucket exits files, then upldoate all static files
+// delete all bucket exits files, then upload all static files
 const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
 
   logInfo(`Indexing bucket files...`)
