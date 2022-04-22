@@ -21,8 +21,6 @@ const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
   logInfo(`Existing files indexed`)
 
   const filesToUpload = await getUploadFiles(staticWebAppPath)
-
-  logInfo(`Uploading new files...`)
   b1.start(filesToUpload.length, 0, {
     speed: "N/A"
   })
@@ -32,13 +30,11 @@ const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
     b1.update(i + 1)
   }
   b1.stop()
-  logInfo(`\nNew files uploaded`)
-  
-  const newFiles = await getAllBucketFiles(aliOssClient)
 
+  
   logInfo(`Comparing existing files and new uploaded files...`)
-  const filesToDelete = oldFiles.filter(oldFile => !newFiles.some(newFile => newFile.name === oldFile.name))
-  console.log('filesToDelete: ', filesToDelete)
+  const filesToDelete = oldFiles.filter(oldFile => filesToUpload.every(([, targetPath]) => targetPath !== oldFile.name))
+  console.log('filesToDelete: ', filesToDelete.length)
 
   if (filesToDelete && filesToDelete.length > 0) {
     logDanger(`Deleting old files...`)

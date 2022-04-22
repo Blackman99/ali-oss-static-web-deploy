@@ -2,3 +2,5 @@ node_modules
 *.log
 yarn.lock
 pnpm-lock.yaml
+test-list.js
+test.js
