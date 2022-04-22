@@ -2,7 +2,16 @@ const getAllBucketFiles = require('./getAllBucketFiles')
 const getUploadFiles = require('./getUploadFiles')
 const path = require('path')
 const chalk = require('chalk')
-const { logInfo, logDanger } = require('./logUtils')
+const { logInfo, logDanger, logSuccess } = require('./logUtils')
+const cliProgress = require('cli-progress')
+
+const b1 = new cliProgress.SingleBar({
+  format: chalk.yellowBright('Uploading new files... {bar}') + '| {percentage}% || {value}/{total} Files uploaded',
+  barCompleteChar: '\u2588',
+  barIncompleteChar: '\u2591',
+  hideCursor: true
+})
+
 
 // delete all bucket exits files, then upload all static files
 const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
@@ -14,26 +23,30 @@ const deleteAllThenUploadAll = async (aliOssClient, staticWebAppPath) => {
   const filesToUpload = await getUploadFiles(staticWebAppPath)
 
   logInfo(`Uploading new files...`)
+  b1.start(filesToUpload.length, 0, {
+    speed: "N/A"
+  })
   for(let i = 0; i < filesToUpload.length; i++) {
     const [localPath, remotePath] = filesToUpload[i]
-    process.stdout.write("\r\x1b[K")
-    process.stdout.write(`${chalk.yellow('Uploading local file: ')}${localPath} ${chalk.yellow('To Ali OSS: ')}${remotePath}\x1b[K`)
     await aliOssClient.put(remotePath, path.normalize(localPath))
+    b1.update(i + 1)
   }
+  b1.stop()
   logInfo(`\nNew files uploaded`)
   
-  
   const newFiles = await getAllBucketFiles(aliOssClient)
+
   logInfo(`Comparing existing files and new uploaded files...`)
   const filesToDelete = oldFiles.filter(oldFile => !newFiles.some(newFile => newFile.name === oldFile.name))
   console.log('filesToDelete: ', filesToDelete)
+
   if (filesToDelete && filesToDelete.length > 0) {
     logDanger(`Deleting old files...`)
     await aliOssClient.deleteMulti(filesToDelete.map(({ name }) => name), { quiet: true })
     logDanger(`Old files deleted`)
   }
 
-  logInfo(`All done.`)
+  logSuccess(`All done.`)
 }
 
 module.exports = deleteAllThenUploadAll

@@ -1,6 +1,6 @@
 {
   "name": "ali-oss-static-web-deploy",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "To help you deploy your static web application with ali oss",
   "main": "index.js",
   "repository": "https://github.com/Blackman99/ali-oss-static-web-deploy",
@@ -8,7 +8,9 @@
   "license": "MIT",
   "dependencies": {
     "ali-oss": "^6.15.2",
-    "chalk": "^4.1.1"
+    "chalk": "^4.1.1",
+    "cli-progress": "^3.10.0",
+    "ora": "^3.2.0"
   },
   "keywords": [
     "oss",
