@@ -32,7 +32,7 @@ aliOSSStaicWebDeploy({
 
 If you don't know how to get the `accessKeyId` and `accessKeySecret`.
 
-Please read the [Ali RAM Documnetation](https://help.aliyun.com/document_detail/28672.html)
+Please read the [Ali RAM Documnetation](https://help.aliyun.com/product/28625.html)
 
 **This tool will delete all files in the bucket then upload all files in `staticWebAppPath`!**
 
