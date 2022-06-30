@@ -42,7 +42,7 @@ Please read the [Ali RAM Documnetation](https://help.aliyun.com/product/28625.ht
 
 * [Ali OSS Node SDK](https://github.com/ali-sdk/ali-oss)
 * [Ali OSS official documentation](https://help.aliyun.com/product/31815.html)
-* [Ali RAM Documnetation](https://help.aliyun.com/document_detail/28672.html)
+* [Ali RAM Documnetation](https://help.aliyun.com/product/28625.html)
 
 ## License
 
