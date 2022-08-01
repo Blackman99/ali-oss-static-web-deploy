@@ -3,6 +3,11 @@
 
 A tool to help you deploy static web application with ali oss
 
+## Features
+
+* Keep your Ali OSS bucket mantain the minimal occupation
+* Deploy OSS static site in a simple way
+
 ## Install
 
 * via npm
@@ -14,7 +19,6 @@ npm install --save ali-oss-static-web-deploy
 ```sh
 yarn add ali-oss-static-web-deploy
 ```
-
 
 ## Usage
 
