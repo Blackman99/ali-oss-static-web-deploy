@@ -1,7 +1,7 @@
 {
   "name": "ali-oss-static-web-deploy",
-  "version": "0.3.0",
-  "description": "To help you deploy your static web application with ali oss",
+  "version": "0.3.1",
+  "description": "To help you deploy your static web application with Ali OSS",
   "main": "index.js",
   "repository": "https://github.com/Blackman99/ali-oss-static-web-deploy.git",
   "author": {
