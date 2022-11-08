@@ -3,7 +3,10 @@
   "version": "0.3.2",
   "description": "To help you deploy your static web application with Ali OSS",
   "main": "index.js",
-  "repository": "https://github.com/Blackman99/ali-oss-static-web-deploy.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blackman99/ali-oss-static-web-deploy.git"
+  },
   "author": {
     "name": "Dongsheng Zhao",
     "email": "1197160272@qq.com"
