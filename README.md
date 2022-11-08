@@ -7,6 +7,7 @@ A tool to help you deploy static web application with ali oss
 
 * Keep your Ali OSS bucket mantain the minimal occupation
 * Deploy OSS static site in a simple way
+* Compare and delete the unnecessary files in OSS
 
 ## Install
 
@@ -37,8 +38,6 @@ aliOSSStaicWebDeploy({
 If you don't know how to get the `accessKeyId` and `accessKeySecret`.
 
 Please read the [Ali RAM Documnetation](https://help.aliyun.com/product/28625.html)
-
-**This tool will delete all files in the bucket then upload all files in `staticWebAppPath`!**
 
 **Please be clearly understanding the consequences!**
 
