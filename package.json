@@ -3,8 +3,11 @@
   "version": "0.3.0",
   "description": "To help you deploy your static web application with ali oss",
   "main": "index.js",
-  "repository": "https://github.com/Blackman99/ali-oss-static-web-deploy",
-  "author": "Zhao Dongsheng",
+  "repository": "https://github.com/Blackman99/ali-oss-static-web-deploy.git",
+  "author": {
+    "name": "Dongsheng Zhao",
+    "email": "1197160272@qq.com"
+  },
   "license": "MIT",
   "dependencies": {
     "ali-oss": "^6.15.2",
