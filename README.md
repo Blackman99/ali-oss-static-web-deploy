@@ -1,7 +1,7 @@
 
 ## Introduction
 
-A tool to help you deploy static web application with ali oss
+A tool to help you deploy static web application with [Ali OSS](https://www.aliyun.com/product/oss)
 
 ## Features
 
