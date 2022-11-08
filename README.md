@@ -8,6 +8,7 @@ A tool to help you deploy static web application with ali oss
 * Keep your Ali OSS bucket mantain the minimal occupation
 * Deploy OSS static site in a simple way
 * Compare and delete the unnecessary files in OSS
+* Uploading commandline progress bar
 
 ## Install
 
