@@ -26,8 +26,5 @@
   ],
   "devDependencies": {
     "@types/node": "^17.0.25"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
