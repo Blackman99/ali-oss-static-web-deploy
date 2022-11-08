@@ -38,8 +38,6 @@ If you don't know how to get the `accessKeyId` and `accessKeySecret`.
 
 Please read the [Ali RAM Documnetation](https://help.aliyun.com/product/28625.html)
 
-**Please be clearly understanding the consequences!**
-
 ## References
 
 * [Ali OSS Node SDK](https://github.com/ali-sdk/ali-oss)
