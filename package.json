@@ -1,6 +1,6 @@
 {
   "name": "ali-oss-static-web-deploy",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "To help you deploy your static web application with Ali OSS",
   "main": "index.js",
   "repository": {
