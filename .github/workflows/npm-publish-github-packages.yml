@@ -10,14 +10,17 @@ jobs:
       packages: write 
     steps:
       - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
-          # Defaults to the user or organization that owns the workflow file
-          scope: '@Blackman99'
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
       - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.N_TOKEN }}
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: 'https://npm.pkg.github.com'
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.G_TOKEN }}
