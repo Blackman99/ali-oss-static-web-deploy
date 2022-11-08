@@ -1,6 +1,6 @@
 {
   "name": "ali-oss-static-web-deploy",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "To help you deploy your static web application with Ali OSS",
   "main": "index.js",
   "repository": {
@@ -26,5 +26,8 @@
   ],
   "devDependencies": {
     "@types/node": "^17.0.25"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
